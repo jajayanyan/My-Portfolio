@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jahiane Andrea</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+ 
+
+<nav class="navbar">
+    <h1 class="logo">TheJACode</h1>
+    <div class="center-nav">
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+      <i class="fas fa-moon"></i>
+    </button>
+  </nav>
+  </div>
+
+
+
+  <header class="hero">
+    <div class="hero-text">
+      <h1>Hi, I'm <span class="highlight">Jahiane</span></h1>
+      <h2 class="subtitle">Frontend Developer</h2>
+      <p>Driven by the thrill of turning ideas into reality through code.</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn">Contact Me</a>   
+      </div>
+      <div class="social-icons circle-icons">
+        <a href="https://www.facebook.com/share/1ZKnEj3zsc/" target="_blank" aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/jaxntx.jai" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://github.com/jajayanyan" target="_blank" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/jahiane" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </div>
+    </div>
+    <div class="hero-img-container">
+      <img src="c:/Users/andre/Desktop/Jayan/Jaja.jpg" alt="Jaja's" class="hero-img" />
+    </div>
+  </header>
+
+ <section id="about" class="section">
+  <h2>About Me</h2>
+  <p>
+     I’m a curious mind with a keyboard — a 2nd-year Computer Science student who loves turning ideas into sleek, interactive web experiences. 
+  Frontend development is my creative outlet, where code meets design and pixels come to life. 
+  Whether it’s a simple landing page or a dynamic web app, I’m all about clean layouts, smooth transitions, and responsive designs that just feel right. 
+  I'm still learning, still building — and I'm just getting started.
+  </p>
+  <blockquote class="about-quote">
+    "Clean code, clean design, and a clear goal: to grow as a frontend developer who puts users first."
+  </blockquote>
+</section>
+
+ <section id="skills" class="section">
+  <h2>Skills</h2>
+  <div class="skill-cards">
+    <div class="skill-card">HTML, CSS, JavaScript</div>
+    <div class="skill-card">Responsive Design</div>
+    <div class="skill-card">Basic Git & GitHub</div>
+    <div class="skill-card">React (Beginner)</div>
+    <div class="skill-card">UI/UX Fundamentals</div>
+    <div class="skill-card">Basic Python & C Programming</div>
+  </div>
+</section>
+
+ <section id="experience" class="section">
+  <h2>Experience</h2>
+  <div class="experience-item">
+    <h3>Personal Projects</h3>
+    <p>Built responsive websites for practice and portfolio, including landing pages, portfolio sites, and interactive components using HTML, CSS, and JavaScript.</p>
+  </div>
+  <div class="experience-item">
+    <h3>Frontend Developer Intern – Student Org Project (2024)</h3>
+    <p>Worked with a small team to develop the frontend of an event registration platform using basic React and GitHub collaboration.</p>
+  </div>
+</section>
+
+  <section id="contact" class="section">
+    <h2>Contact Me</h2>
+    <form class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <p>Email: andreajahiane@gmail.com | Phone: +639854140630</p>
+    <p>&copy; 2025 Jahiane Camangian. Code. Create. Innovate. Repeat.</p>
+  </footer>
+
+  <script src="script.js">
+
+const toggle = document.getElementById('theme-toggle');
+const body = document.body;
+
+// Load saved theme or system preference
+const savedTheme = localStorage.getItem('theme');
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+  body.classList.add('dark');
+  toggle.innerHTML = '<i class="fas fa-sun"></i>';  // show sun icon for dark mode ON
+} else {
+  toggle.innerHTML = '<i class="fas fa-moon"></i>'; // show moon icon for light mode
+}
+
+// Toggle theme on button click
+toggle.addEventListener('click', () => {
+  body.classList.toggle('dark');
+  if (body.classList.contains('dark')) {
+    toggle.innerHTML = '<i class="fas fa-sun"></i>';
+    localStorage.setItem('theme', 'dark');
+  } else {
+    toggle.innerHTML = '<i class="fas fa-moon"></i>';
+    localStorage.setItem('theme', 'light');
+  }
+});
+
+
+
+  </script>
+</body>
+</html>
