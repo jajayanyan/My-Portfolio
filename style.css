@@ -61,7 +61,7 @@ html {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 0;
+  gap: 0.5;
   margin: 0;
   padding: 0;
 }
